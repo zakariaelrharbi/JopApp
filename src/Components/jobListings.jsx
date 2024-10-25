@@ -1,6 +1,6 @@
 import React from 'react'
 
-const jobListings = () => {
+const JobListings = () => {
   return (
     <div>
       <section className="bg-blue-50 px-4 py-10">
@@ -100,4 +100,4 @@ const jobListings = () => {
   )
 }
 
-export default jobListings
+export default JobListings
