@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
 const JobListing1 = ({job}) => {
-  const [showMore, setShowMore] = useState(1);
+  const [showMore, setShowMore] = useState(0);
 
-  // const toogleShowMore = () =>{
-
-  // }
+  const toogleShowMore = () =>{
+    setShowMore((prev)=> !prev)
+  }
   return (
     <div>
       <div className="bg-white rounded-xl shadow-md relative">
@@ -20,7 +20,7 @@ const JobListing1 = ({job}) => {
                         !showMore ? job.description.substring(0, 90) + '...' : job.description
                       }
                     </div>
-                    <button onClick={setShowMore}  className='text-indigo-500 mb-5 hover:text-indigo-600'>
+                    <button onClick={toogleShowMore}  className='text-indigo-500 mb-5 hover:text-indigo-600'>
                       {
                         showMore ? 'Show Less' : 'Show More'
                       }
