@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 const JobListing1 = ({job}) => {
+  const [showMore, setShowMore] = useState(0);
   return (
     <div>
       <div className="bg-white rounded-xl shadow-md relative">
@@ -10,7 +11,10 @@ const JobListing1 = ({job}) => {
                       <h3 className="text-xl font-bold">{job.title}</h3>
                     </div>
                     <div className="mb-5">
-                      {job.description}
+                      {/* condition to show only first 90 words of the description  */}
+                      {
+                        !showMore ? job.description.substring(0, 90) + '...' : job.description
+                      }
                     </div>
                     <h3 className="text-indigo-500 mb-2">{job.salary} /Year</h3>
                     <div className="border border-gray-100 mb-5" />
