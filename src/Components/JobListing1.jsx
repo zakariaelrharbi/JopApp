@@ -8,6 +8,7 @@ const JobListing1 = ({job}) => {
   const toogleShowMore = () =>{
     setShowMore((prev)=> !prev)
   }
+
   return (
     <div>
       <div className="bg-white rounded-xl shadow-md relative">
