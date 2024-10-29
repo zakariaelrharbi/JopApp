@@ -1,3 +1,9 @@
+import {
+  Route,
+  createBrowserRouter,
+  createRoutesFromElements,
+  RouterProvider,
+} from 'react-router-dom'
 import React from 'react'
 import NavBar from './Components/NavBar'
 import HeroSection from './Components/HeroSection'
