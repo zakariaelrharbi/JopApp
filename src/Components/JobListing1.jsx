@@ -17,10 +17,14 @@ const JobListing1 = ({ job }) => {
             <h3 className="text-xl font-bold">{job.title}</h3>
           </div>
           <div className="mb-5">
-            {!showMore ? job.description.substring(0, 90) + '...' : job.description}
+            {
+              !showMore ? job.description.substring(0, 90) + '...' : job.description
+            }
           </div>
           <button onClick={toggleShowMore} className="text-indigo-500 mb-5 hover:text-indigo-600">
-            {showMore ? 'Show Less' : 'Show More'}
+            {
+              showMore ? 'Show Less' : 'Show More'
+            }
           </button>
           <h3 className="text-indigo-500 mb-2">{job.salary} /Year</h3>
           <div className="border border-gray-100 mb-5" />
