@@ -7,6 +7,8 @@ import React from 'react'
 import HomePage from './Pages/HomePage'
 import MainLayout from './Layouts/MainLayout'
 import JobsPage from './Pages/JobsPage'
+import NotFoundPage from './Pages/NotFoundPage'
+
 
 const App = () => {
   return (
@@ -15,6 +17,7 @@ const App = () => {
         <Route path='/' element={<MainLayout/>}>
           <Route path='/' index element={<HomePage/>}/>
           <Route path='/jobsPage' element={<JobsPage/>}/>
+          <Route path='/NotFoundPage' element={<NotFoundPage/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
