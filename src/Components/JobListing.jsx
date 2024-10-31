@@ -2,8 +2,8 @@ import React from 'react'
 import Jobs from '../jobs.json'
 import JobListing1 from './JobListing1'
 
-const Joblisting = () => {
-  const recentJobs = Jobs.slice(0, 3);
+const Joblisting = ({isHome = false}) => {
+  const JobListings = isHome ? Jobs.slice(0, 3) : Jobs;
   return (
     <div>
       <section className="bg-blue-50 px-4 py-10">
@@ -13,7 +13,7 @@ const Joblisting = () => {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {
-              recentJobs.map((job) => (
+              JobListings.map((job) => (
                 <JobListing1 key={job.id} job={job}/>
               ))
             }
